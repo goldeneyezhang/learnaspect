@@ -22,7 +22,6 @@ class AopdemoApplicationTests {
     @Test
     public void testApple() {
         apple.eat();
-        son.eat();
     }
 
     @Resource

@@ -13,6 +13,8 @@ class AopdemoApplicationTests {
     @Autowired
     private Apple apple;
     @Autowired
+    private Apple2 apple2;
+    @Autowired
     private FruitBucket fruitBucket;
     @Resource
     private Member member;
@@ -34,7 +36,11 @@ class AopdemoApplicationTests {
     public void testFruitBucket() {
         fruitBucket.putIntoBucket(new Apple2());
     }
-
+    @Test
+    public void testDeclareParents() {
+        IDescriber describer = (IDescriber) apple2;
+        describer.desc();
+    }
     // 实现
     @Test
     public void test1() {

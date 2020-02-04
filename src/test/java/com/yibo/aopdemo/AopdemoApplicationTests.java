@@ -1,7 +1,6 @@
 package com.yibo.aopdemo;
 
 import com.yibo.aopdemo.example.Apple;
-import com.yibo.aopdemo.example.AppleSon;
 import com.yibo.aopdemo.example.Leader;
 import com.yibo.aopdemo.example.Member;
 import org.junit.jupiter.api.Test;
@@ -16,12 +15,15 @@ class AopdemoApplicationTests {
     @Autowired
     private Apple apple;
 
-    @Autowired
-    private AppleSon son;
 
     @Test
     public void testApple() {
         apple.eat();
+    }
+
+    @Test
+    public void testApple2() {
+        apple.eat2();
     }
 
     @Resource

@@ -16,4 +16,12 @@ public class MyAspect2 {
         System.out.println("this is after around advice 2");
         return result;
     }
+
+    @Around("@annotation(com.yibo.aopdemo.example.FruitAspect)")
+    public Object around2(ProceedingJoinPoint pjp) throws Throwable {
+        System.out.println("this is before around2 advice 2");
+        Object result = pjp.proceed();
+        System.out.println("this is after around2 advice 2");
+        return result;
+    }
 }

@@ -1,8 +1,6 @@
 package com.yibo.aopdemo;
 
-import com.yibo.aopdemo.example.Apple;
-import com.yibo.aopdemo.example.Leader;
-import com.yibo.aopdemo.example.Member;
+import com.yibo.aopdemo.example.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +12,13 @@ class AopdemoApplicationTests {
 
     @Autowired
     private Apple apple;
+    @Autowired
+    private FruitBucket fruitBucket;
+    @Resource
+    private Member member;
 
+    @Resource
+    private Leader leader;
 
     @Test
     public void testApple() {
@@ -26,11 +30,10 @@ class AopdemoApplicationTests {
         apple.eat2();
     }
 
-    @Resource
-    private Member member;
-
-    @Resource
-    private Leader leader;
+    @Test
+    public void testFruitBucket() {
+        fruitBucket.putIntoBucket(new Apple2());
+    }
 
     // 实现
     @Test

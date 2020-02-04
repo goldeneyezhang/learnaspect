@@ -16,6 +16,8 @@ class AopdemoApplicationTests {
     private Apple2 apple2;
     @Autowired
     private FruitBucket fruitBucket;
+    @Autowired
+    private Fruit fruit;
     @Resource
     private Member member;
 
@@ -36,6 +38,12 @@ class AopdemoApplicationTests {
     public void testFruitBucket() {
         fruitBucket.putIntoBucket(new Apple2());
     }
+
+    @Test
+    public void testPerthis() {
+        fruit.eat();
+    }
+
     @Test
     public void testDeclareParents() {
         IDescriber describer = (IDescriber) apple2;
